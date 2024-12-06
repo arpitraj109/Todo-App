@@ -1,0 +1,93 @@
+.todo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+  }
+  
+  
+  .task-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .task-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .task-card-header h5 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+  }
+  
+  .task-card-header .task-date {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+  }
+  
+  .task-card-body {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .task-card button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+  }
+  
+  .task-card button:hover {
+    background-color: #2980b9;
+  }
+  
+  
+  .completed {
+    opacity: 0.6;
+    background-color: #ecf0f1;
+  }
+  
+  
+  .high-priority {
+    border-left: 5px solid #e74c3c;
+  }
+  
+  .medium-priority {
+    border-left: 5px solid #f1c40f;
+  }
+  
+  .low-priority {
+    border-left: 5px solid #2ecc71;
+  }
+
+@media (max-width: 768px) {
+    .todo-list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .todo-list {
+      grid-template-columns: 1fr;
+    }
+  }
+  
